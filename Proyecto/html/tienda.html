@@ -3,30 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Estas buscando computadoras? No busques mas aqui en PCBUY tendras todo lo que buscas">
-    <title>Mi Tienda</title>
-    <link rel="icon" type="image/jpg" href="./img/favicon.ico"/>
+    <title>Shop</title>
+    <link rel="shortcut icon" href="../images/layout/favicon.ico" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
-<header>
-    
-    <div class="navbar">
-        <a href="../../Index.html" id="home">Inicio</a>
-        <a href="./tienda.html" id="store">Tienda</a>
-        <a href="./contacto.html" id="contact">Contacto</a>
-    </div>
-
-    <div id="content">
-        
-    </div>
-    
-</header>
 <body>
-    <a>hola</a>
-    <script src="../js/main.js"></script>
-</body>
-<footer>
+    <header id="header" class="menuTop">
+        <div class="menu">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../imgs/favicon.ico" alt="logoAXPC">
+                    <a href="../../Index.html"><span class="">A</span>X<span><span>PC</span></a>
+                </div>
+                <div class="navegation">
+                    <ul>
+                        <li>
+                            <a href="../../index.html">
+                                <img src="../imgs/home-page-white.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../Index.html" id="home">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="./tienda.html" id="store">Tienda</a>
+                        </li>
+                        <li>
+                            <a href="./contacto.html" id="contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar">
+                </div>
+                <div class="items">
+                    <button id="searchButton" class="botonHeader1">
+                        <img src="../imgs/search-white.png" alt="searchButton">
+                        <span id=""></span>
+                    </button>
+                    <button id="userButtonHeader" class="botonHeader2">
+                        <img src="../imgs/header/user-white.png" alt="userButton">
+                        <p>
+                            <span id="userNameHeader"></span>
+                        </p>
+                    </button>
+                    <button id="cartButtonHeader" class="botonHeader3">
+                        <img src="../imgs/shopping-cart-white.png" alt="cartButton">
+                        <p>
+                            <span id="cartCountHeader"></span>
+                        </p>
+                    </button>
+                </div>
+            </nav>
+        </div>
+<!-- sign up -->
+        <div id="signUpId" class="signUp">
+            <div class="signUpContent">
+                <div class="signUpTop">
+                    <h2>
+                        SIGN UP
+                    </h2>
+                    <button id="userCloseButton" type="button" class="btn-close userCloseButton" aria-label="Close"></button>
+                </div>
+                <form id="signUpForm" class="signUpFormStyle">
+                    <input type="text" id="username" placeholder="User Name" required="">
+                    <input type="email" id="email" placeholder="Email" required="">
+                    <input type="date" id="birthday" placeholder="mm/dd/yyyy" required="">
+                    <input type="password" id="password" placeholder="Create a password" required="">
+                    <input type="submit" class="signUpButton" value="Sign up">
+                    <input id="logOutButtom" type="submit"  class="signUpButton" value="Log Out">
+                </form>
+            </div>
+        </div>
+<!-- shopping cart -->
+        <div class="shoppingCart">
+            <div class="shoppingCartStyle">
+                    <div class="cartTop">
+                        <h3>
+                            CART
+                        </h3>
+                        <button id="cartCloseButton" type="button" class="btn-close cartClose" aria-label="Close"></button>
+                    </div>
+                    <div id="cartContainer" class="cartProductsContainer"></div>
+                    <div>
+                        <p class="cartTotalPrice">
+                            Total cost: USD <span id="totalCost">0</span>
+                        </p>
+                    </div>
+                    <div class="cartBtnSize">
+                        <button id="clearCartBtn" class="cartButton">
+                            Delete all
+                        </button>
+                        <button id="finishPurchaseBtn" class="cartButton">
+                            Go to Pay
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </header>
+    <main class="mainContent">
+        <section class="carouselHeader">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner carouselSize">
+                    <img src="../imgs/carousel-3.jpg" class="carousel-item active carouselImg" alt="...">
+                    <img src="../imgs/carousel-4.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../imgs/carousel-5.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../imgs/carousel-1.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../imgs/carousel-2.jpg" class="carousel-item carouselImg" alt="...">
+                    <div class="opacity"></div>
+                </div>
+                    <button class="carousel-control-prev carouselHeaderBtn" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next carouselHeaderBtn" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+        </section>
+        <section id="" class="shopGrid">
+            <div class="filterList">
+                <div class="filterListTitle">
+                    <p>
+                        FILTER BY PRICE
+                    </p>
+                </div>
+                <div class="filterOrder">
+                    <div class="filterBox">
+                        <label class="filterSubtitle" for="filterPriceMin">
+                            Lower Price:
+                        </label>
+                        <input class="inputValue" type="number" id="filterPriceMin" name="filterPriceMin" placeholder="Enter a value">
+                    </div>
+                    <div class="filterBox">
+                        <label class="filterSubtitle" for="filterPriceMax">
+                            Higher Price:
+                        </label>
+                        <input class="inputValue" type="number" id="filterPriceMax" name="filterPriceMax" placeholder="Enter a value">
+                    </div>                 
+                </div>
+                <div class="btnFiltSize">
+                    <button id="buttonFilter" name="buttonFilter" class="buttonFilter">Filter</button>
+                </div>
+                <div>
+                    <hr class="dividerLine">
+                </div>
+            </div>
+            <div id="stockContainerId" class="stockContainer"></div>
+        </section>
+    </main>
 
-</footer>
+    <footer class="footerStyle">
+        <div class="footerItems">
+            <div class="footerImg">
+                <div class="logoFooter">
+                    <p>
+                        AXPC
+                    </p>
+                </div>
+                <ul class="socialNet">
+                    <li>
+                        <img src="../imgs/instagram.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../imgs/facebook.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../imgs/youtube.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../imgs/twitter.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../imgs/linkedin.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="footerInf">
+                <div>
+                    <p>INDEX</p>
+                    <ul>
+                        <li>
+                            <a href="">Explore</a>
+                        </li>
+                        <li>
+                            <a href="">Shop</a>
+                        </li>
+                        <li>
+                            <a href="">About us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>FAQ</p>
+                    <ul>
+                        <li>
+                            <a href="">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="">Frequently Asked Questions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p>CONTACT US</p>
+                    <ul>
+                        <li>
+                            <a href="">Montevideo, Uruguay.</a>
+                        </li>
+                    </ul>
+                    <p>
+                        Phone Number:
+                    </p>
+                    <a href="">+598 4444 6666</a>
+                </div>
+            </div>
+        </div>
+        <div class="payment">
+            <ul>
+                <li>
+                    <img src="../imgs/american-express.png" alt="">
+                </li>
+                <li>
+                    <img src="../imgs/pago-de-apple.png" alt="">
+                </li>
+                <li>
+                    <img class="specialSize" src="../imgs/tarjeta.png" alt="">
+                </li>
+                <li>
+                    <img class="specialSize" src="../imgs/paypal.png" alt="">
+                </li>
+                <li>
+                    <img class="specialSize" src="../imgs/visa.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="copyRight">
+            <p>© 2023 AXPC | All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/pageStyles.js"></script>
+    <script src="../js/Tienda.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
 </html>

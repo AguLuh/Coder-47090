@@ -1,18 +1,1026 @@
-.navbar {
-    background-color: #333;
-    overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar a {
-    float: left;
-    display: block;
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Barra de scroll */
+
+*::-webkit-scrollbar {
+    background: #cfcfcf;
+    width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+    background: #272727;
+    width: 5px;
+    opacity: 0.6;
+}
+
+/* Reset Bootstrap */
+
+h2 {
+    margin-bottom: unset;
+}
+
+h3 {
+    margin-bottom: unset;
+}
+
+img, svg {
+    vertical-align: unset;
+}
+
+ul {
+    margin-top: unset;
+    margin-bottom: unset;
+    padding-left: unset;
+}
+
+p {
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+/* Anuncio de descuento */
+
+.announcement {
+    background-color: #e65524;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    height: 36px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Header */
+
+/* Menu pegado arriba */
+.menuTop {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    height: 130px;
+    align-items: center;
+    border-bottom: 1px solid #9c9c9c00;
+}
+
+/* Estilo inicial para el elemento .menu */
+.menu {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; /* Color de fondo transparente inicial */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Cambia la posición superior cuando el elemento .menu está en hover */
+.menu:hover::before {
+    top: 0; /* El fondo blanco cae desde arriba cuando se hace hover */
+}
+
+.menuFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: white;
+    border-bottom-color: #040404;
+    animation: slideFromTop 0.5s ease;
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* MENUFIXED COLORES INVERTIDOS v */
+.menuFixed nav div img {
+    filter: invert(1);
+}
+
+.menuFixed nav div a {
+    color: black;
+}
+
+.menuFixed nav div ul li a {
+    color: black;
+}
+
+.menuFixed nav div button img {
+    filter: invert(1);
+}
+
+.menuFixed nav div button p span {
+    color: black;
+}
+
+/* MENUFIXED COLORES INVERTIDOS ʌ */
+
+.menuColor {
+    background-color: white;
+    border-bottom: 1px solid;
+    border-bottom-color: #040404;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin: 0 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #9c9c9c00;
+    transition: 1s;
+}
+
+.logo a:hover{
+    border-bottom: 2px solid #2f2f2f;
+    background-color: rgb(174, 174, 174);
+}
+
+/* Navegacion de la página */
+.navegation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navegation ul li {
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #9c9c9c00;
+    transition: 1s;
+}
+
+.navegation ul li:hover {
+    border-bottom: 2px solid #2f2f2f;
+    color: black;
+    background-color: rgb(174, 174, 174);
+}
+
+.navegation ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+}
+
+.navegation ul li a img {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+/* Items interactivos de la pagina */
+.items {
+    display: flex;
+}
+
+.items button {
+    background: #ffffff00;
+    border: none;
+    margin: 0 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #9c9c9c00;
+    transition: 1s;
+}
+
+.items button img {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.botonHeader2 p span {
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: white;
+}
+
+.botonHeader3 p span {
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: white;
+}
+
+.items button:hover {
+    border-bottom: 2px solid #585858;
+    background-color: rgb(174, 174, 174);
+}
+
+/* Footer */
+
+.footerStyle {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footerStyle div {
+    margin-bottom: 20px;
+}
+
+.footerItems {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.logoFooter p {
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+}
+
+.socialNet {
+    filter: invert(100%);
+    display: flex;
+    list-style: none;
+}
+
+.socialNet li {
+    margin: 5px;
+}
+
+.socialNet li img {
+    height: 25px;
+    width: 25px;
+}
+
+.footerInf {
+    display: flex;
+}
+
+.footerInf div {
+    margin: 0 20px;
+}
+
+.footerInf div p {
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin: 15px 0;
+}
+
+.footerInf div ul {
+    list-style: none;
+}
+
+.footerInf div ul li {
+    margin: 15px 0;
+}
+
+.footerInf div ul li a {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
     text-decoration: none;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
+.footerInf div a {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.payment {
+    margin: 10px;
+}
+
+.payment ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.payment ul li {
+    margin: 0 5px;
+}
+
+.payment ul li img {
+    width: 40px;
+}
+
+.specialSize {
+    object-fit: contain;
+    background-color: white;
+    height: 26px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.copyRight {
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+/* SECTIONS */
+
+section {
+    margin-bottom: 100px;
+}
+
+/* INDEX */
+.mainContentIndex {
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.carouselHeader {
+    height: 650px;
+}
+
+.carouselSize {
+    height: 650px;
+}
+
+.carousel-item {
+    position: absolute;
+}
+
+.carouselImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carouselHeaderBtn {
+    z-index: 23;
+}
+
+.opacity {
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    background-color: rgb(24, 24, 24);
+    opacity: 0.5;
+    z-index: 21;
+}
+
+.shopIndex {
+    display: flex;
+    justify-content: center;
+}
+
+.cardIndex {
+    margin: 0 10px;
+    transition: 2s;
+}
+
+.cardIndex:hover {
+    transform: scale(1.1);
+}
+
+.cardIndex div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardIndex a {
+    text-decoration: none;
     color: black;
+}
+
+.cardIndex a div h5 {
+    font-size: 15px;
+}
+
+/* About us */
+
+.aboutText {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutText div {
+    max-width: 768px;
+}
+
+.aboutText div h1 {
+    font-size: 36px;
+}
+
+.aboutText div p {
+    margin: 0 0 1.25rem;
+    font-size: 14px;
+    color: #606060;
+}
+
+.ratingSection {
+    display: flex;
+    justify-content: center;
+}
+
+.ratingItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ratingSection div {
+    max-width: 768px;
+}
+
+.ratingSection div h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.star {
+    margin-bottom: 10px;
+}
+
+.star img {
+    height: 50px;
+    width: 50px;
+}
+
+.ratingSection div p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.google {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.commentsSection {
+    display: flex;
+    justify-content: center;
+}
+
+.commet {
+    margin: 0 10px;
+}
+
+.commentsSection div div div img {
+    vertical-align: middle;
+}
+
+
+/* Tienda */
+
+.shopGrid {
+    display: grid;
+    grid-template-columns: 25% 72.5%;
+    grid-template-rows: 100%;
+    gap: 2.5%;
+}
+
+/* filtro */
+
+.filterList {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+}
+
+.filterList div {
+    margin-bottom: 1vw;
+}
+
+.filterListTitle{
+    font-size: 2vw;
+    text-align: center;
+}
+
+.filterOrder{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.filterBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.filterSubtitle {
+    display: flex;
+    color: #000000;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+
+.inputValue{
+    border: solid #000000 0.1vw ;
+    border-radius: 1vw;
+    border-top-left-radius: unset;
+    border: 1px solid;
+    height: 3vw;
+    font-size: .9vw;
+    width: 9vw;
+    padding: 0 5px 0 1.3vw;
+    color: #000000;
+}
+.inputValue::placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+.btnFiltSize {
+    align-self: center;
+}
+
+.buttonFilter {
+    background-color: white;
+    color: #000000;
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    border: solid #090909 0.1vw;
+    height: 3.3vw;
+    width: 15vw;
+    align-self: center;
+}
+.buttonFilter:hover{
+    color: white;
+    background-color: #000000;
+}
+
+.dividerLine{
+    color: #000000;
+}
+
+.stockContainer{
+    grid-column: 2/2;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 5vw;
+    gap: 5vw;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    border-radius: 10px;
+    width: 20vw;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.product img{
+    border-radius: 10px;
+    width: 20vw;
+    height: auto;
+}
+
+.product h3 {
+    color: #000000;
+    font-size: 1.5vw;
+}
+
+.product p {
+    font-size: 1vw;
+    color: #000000;
+    margin: 0 1vw;
+}
+
+.buttonAdd {
+    font-size: 1vw;
+    background-color: white;
+    border: solid #090909 0.1vw;
+    color: #000000;
+    width: 10vw;
+    height: 2.5vw;
+    border-radius: .5vw;
+    margin-top: .5vw;
+    margin-bottom: 1vw;
+}
+
+.buttonAdd:hover{
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* inicio */
+
+.signUp {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 60;
+}
+
+.signUp-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.signUpContent {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: #ffffff;
+    padding: 4vw 1vw;
+    height: 100%;
+    width: 30vw;
+    color: #000000;
+}
+
+.signUpTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signUpTop h2 {
+    color: #000000;
+    font-size: 2vw;
+}
+
+.userCloseButton {
+    font-size: 1vw;
+}
+
+.signUpFormStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.signUpFormStyle input {
+    height: 3vw;
+    width: 100%;
+    border: solid 1px #000000; 
+    border: 1px solid rgb(0 0 0 / 20%);
+    background-color: #ffffff;
+    color: #000000;
+    margin: 13px;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    font-size: 17px;
+}
+
+.signUpFormStyle input::placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+.signUpButton:hover{
+    background-color: #151515;
+    color: white;
+}
+
+/* carrito */
+
+.shoppingCart {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 70;
+}
+
+.cart-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.shoppingCartStyle {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 10px;
+    background-color: #ffffff;
+    width: 40vw;
+    height: 100%;
+    padding: 1.8vw 1.5vw;
+    transition: all 0.5s;
+}
+
+.cartTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartTop h3 {
+    color: #000000;
+    font-size: 2vw;
+}
+
+.cartClose {
+    font-size: 1vw;
+    padding: 10px;
+}
+
+.cartProductsContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.cartProducts {
+    color: #000000;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 20px;
+    padding: 10px;
+}
+
+.cartProducts img {
+    width: 3vw;
+}
+
+.cartTotalPrice {
+    color: #000000;
+    font-size: 1vw;
+}
+
+
+.trashButton {
+    background-color: #35313100;
+    border: none;
+    cursor: pointer;
+}
+
+.trashButton img {
+    height: 20px;
+    width: 20px;
+}
+
+.cartBtnSize {
+    display: flex;
+    justify-content: center;
+}
+
+.cartButton {
+    font-size: 1.1vw;
+    background-color: white;
+    border: solid 0.09vw #000000;
+    color: #000000;
+    width: 100%;
+    height: 2.5vw;
+    border-radius: 0.5vw;
+    margin: 0 5px;
+}
+.cartButton:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Contacto */
+
+.contactSection {
+    display: flex;
+    justify-content: center;
+}
+
+.contactSection div {
+    max-width: 768px;
+    width: 700px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contactForm input {
+    border: 1px solid rgb(0 0 0 / 8%);
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.contactForm textarea {
+    border: 1px solid rgb(0 0 0 / 8%);
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.botonContactForm input {
+    background-color: #222529;
+    border: none;
+    padding: 0.5em 1em;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 3rem;
+    letter-spacing: -0.015em;
+    border-radius: 5px;
+}
+
+.infSection {
+    display: flex;
+    justify-content: center;
+}
+
+.infSection div {
+    margin: 0 20px;
+    padding: 10px 25px;
+    border: 1px solid #aeaeae;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infSection div img {
+    margin-bottom: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.infSection div h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.infSection div p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #676767;
+}
+
+
+/* Payment page styles */
+
+.paySection {
+    display: flex;
+}
+
+.payCartStyle{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000000;
+    margin: 0 2vw;
+}
+
+.paymentTitle{
+    font-size: 2vw;
+}
+
+.containerCart{
+    height: 400px;
+    overflow: auto;
+}
+
+.showPayCart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    height: auto;
+    margin: 1vw;
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+.showPayCart img{
+    width: 5vw;
+    height: auto;
+}
+
+.payTotalprice {
+    font-size: 2vw;
+}
+
+.pay {
+    width: 50%;
+}
+
+.payForm {
+    margin: 0 2vw;
+}
+
+.cardsAccepted {
+    display: flex;
+    align-items: center;
+}
+
+.cardsAccepted p {
+    font-size: 15px;
+}
+
+.cardsAccepted div ul {
+    margin: unset;
+}
+
+.payFieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.payFieldset label {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.payFieldset input {
+    border: 1px solid rgb(0 0 0 / 8%);
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.payFieldsetMore {
+    display: flex;
+}
+
+.payFieldsetMore div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.paySubmit input {
+    background-color: #ffffff;
+    padding: 6px 10px;
+    font-size: 17px;
+    border: 1px solid #000000;
+}
+
+.paySubmit input:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
