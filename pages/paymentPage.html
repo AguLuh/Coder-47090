@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AXPC</title>
-    <link rel="shortcut icon" href="./images/layout/favicon.ico" type="image/x-icon">
+    <title>Payment</title>
+    <link rel="shortcut icon" href="../images/layout/favicon.ico" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,47 +18,44 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
-    <!-- <div class="announcement">
-        <span>20% OFF on Monday</span>
-    </div> Anuncio de descuento que tal vez agregue -->
     <header id="header" class="menuTop">
         <div class="menu">
             <nav class="navbar">
                 <div class="logo">
-                    <img src="./images/layout/logo/logo.png" alt="">
-                    <a href="./index.html">AXPC</a>
+                    <img src="../images/layout/logo/logo.png" alt="">
+                    <a href="../index.html"><span class="">A</span>X<span><span>PC</span></a>
                 </div>
                 <div class="navegation">
                     <ul>
                         <li>
-                            <a href="./index.html">
-                                <img src="./images/layout/header/home-page-white.png" alt="">
+                            <a href="../index.html">
+                                <img src="../images/layout/header/home-page-white.png" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="./pages/aboutUs.html">About us</a>
+                            <a href="./aboutUs.html">About us</a>
                         </li>
                         <li>
-                            <a href="./pages/shop.html">Shop</a>
+                            <a href="./shop.html">Shop</a>
                         </li>
                         <li>
-                            <a href="./pages/contactUs.html">Contact us</a>
+                            <a href="./contactUs.html">Contact us</a>
                         </li>
                     </ul>
                 </div>
                 <div class="items">
                     <button id="searchButton" class="botonHeader1">
-                        <img src="./images/layout/header/search-white.png" alt="searchButton">
+                        <img src="../images/layout/header/search-white.png" alt="searchButton">
                         <span id=""></span>
                     </button>
                     <button id="userButtonHeader" class="botonHeader2">
-                        <img src="./images/layout/header/user-white.png" alt="userButton">
+                        <img src="../images/layout/header/user-white.png" alt="userButton">
                         <p>
                             <span id="userNameHeader"></span>
                         </p>
                     </button>
                     <button id="cartButtonHeader" class="botonHeader3">
-                        <img src="./images/layout/header/shopping-cart-white.png" alt="cartButton">
+                        <img src="../images/layout/header/shopping-cart-white.png" alt="cartButton">
                         <p>
                             <span id="cartCountHeader"></span>
                         </p>
@@ -94,8 +91,7 @@
                         </h3>
                         <button id="cartCloseButton" type="button" class="btn-close cartClose" aria-label="Close"></button>
                     </div>
-                    <div id="cartContainer" class="cartProductsContainer">
-                    </div>
+                    <div id="cartContainer" class="cartProductsContainer"></div>
                     <div>
                         <p class="cartTotalPrice">
                             Total cost: USD <span id="totalCost">0</span>
@@ -112,15 +108,15 @@
             </div>
         </div>
     </header>
-    <main class="mainContentIndex">
+    <main class="mainContent">
         <section class="carouselHeader">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="true">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner carouselSize">
-                    <img src="./images/index/carousel-1.jpg" class="carousel-item active carouselImg" alt="...">
-                    <img src="./images/index/carousel-2.jpg" class="carousel-item carouselImg" alt="...">
-                    <img src="./images/index/carousel-3.jpg" class="carousel-item carouselImg" alt="...">
-                    <img src="./images/index/carousel-4.jpg" class="carousel-item carouselImg" alt="...">
-                    <img src="./images/index/carousel-5.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../images/index/carousel-5.jpg" class="carousel-item active carouselImg" alt="...">
+                    <img src="../images/index/carousel-1.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../images/index/carousel-2.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../images/index/carousel-3.jpg" class="carousel-item carouselImg" alt="...">
+                    <img src="../images/index/carousel-4.jpg" class="carousel-item carouselImg" alt="...">
                     <div class="opacity"></div>
                 </div>
                     <button class="carousel-control-prev carouselHeaderBtn" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -133,46 +129,62 @@
                     </button>
             </div>
         </section>
-        <section class="shopIndex">
-            <div class="card cardIndex" style="width: 18rem;">
-                <a href="./pages/shop.html">
-                    <img src="./images/index/shop_index-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Desktop PC</h5>
-                    </div>
-                </a>
+        <section class="paySection">
+            <div class="payCartStyle">
+                <h2 class="paymentTitle">Your Purchase:</h2>
+                <div id="showPayCart" class="containerCart"></div>
+                <div class="payTotalprice">Total: USD <span id="payTotalprice"></span></div>
             </div>
-            <div class="card cardIndex" style="width: 18rem;">
-                <a href="./pages/shop.html">
-                    <img src="./images/index/shop_index-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Notebooks</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card cardIndex" style="width: 18rem;">
-                <a href="./pages/shop.html">
-                    <img src="./images/index/shop_index-3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Console</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card cardIndex" style="width: 18rem;">
-                <a href="./pages/shop.html">
-                    <img src="./images/index/shop_index-4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gaming accessories</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="card cardIndex" style="width: 18rem;">
-                <a href="./pages/shop.html">
-                    <img src="./images/index/shop_index-5.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Monitors</h5>
-                    </div>
-                </a>
+            <div class="pay">
+                <form class="payForm">
+                        <h2 class="paymentTitle">Payment</h2>
+                        <div class="cardsAccepted">
+                            <p>Accepted payment methods:</p>
+                            <div class="payment">
+                                <ul>
+                                    <li>
+                                        <img src="../images/layout/american-express.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="../images/layout/pago-de-apple.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="specialSize" src="../images/layout/tarjeta.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="specialSize" src="../images/layout/paypal.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="specialSize" src="../images/layout/visa.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <fieldset class="payFieldset">
+                                <label for="cardName">Name on card: *</label>
+                                <input id="cardName" type="text" name="cardName" placeholder="Your name" required="">
+
+                                <label for="cardNumber">Credit card number: *</label>
+                                <input id="cardNumber" type="number" name="cardNumber" placeholder="1111-2222-3333-4444" required="">
+
+                                <label for="expMonth">Exp. month: *</label>
+                                <input id="expMonth" type="text" name="expMonth" placeholder="January" required="">
+
+                            <div class="payFieldsetMore">
+                                <div>
+                                    <label for="expYear">Exp. year: *</label>
+                                    <input id="expYear" type="number" name="expYear" placeholder="2023" required="">
+                                </div>
+                                <div>
+                                    <label for="CVV">CVV: *</label>
+                                    <input id="CVV" type="text" name="CVV" placeholder="123" required="">
+                                </div>
+                            </div>
+                            <div class="paySubmit">
+                                <input id="finishPayment" type="submit" name="checkout" value="Proceed to checkout">
+                            </div>
+                        </fieldset>
+                </form>
             </div>
         </section>
     </main>
@@ -186,19 +198,19 @@
                 </div>
                 <ul class="socialNet">
                     <li>
-                        <img src="./images/layout/instagram.png" alt="">
+                        <img src="../images/layout/instagram.png" alt="">
                     </li>
                     <li>
-                        <img src="./images/layout/facebook.png" alt="">
+                        <img src="../images/layout/facebook.png" alt="">
                     </li>
                     <li>
-                        <img src="./images/layout/youtube.png" alt="">
+                        <img src="../images/layout/youtube.png" alt="">
                     </li>
                     <li>
-                        <img src="./images/layout/twitter.png" alt="">
+                        <img src="../images/layout/twitter.png" alt="">
                     </li>
                     <li>
-                        <img src="./images/layout/linkedin.png" alt="">
+                        <img src="../images/layout/linkedin.png" alt="">
                     </li>
                 </ul>
             </div>
@@ -248,19 +260,19 @@
         <div class="payment">
             <ul>
                 <li>
-                    <img src="./images/layout/american-express.png" alt="">
+                    <img src="../images/layout/american-express.png" alt="">
                 </li>
                 <li>
-                    <img src="./images/layout/pago-de-apple.png" alt="">
+                    <img src="../images/layout/pago-de-apple.png" alt="">
                 </li>
                 <li>
-                    <img class="specialSize" src="./images/layout/tarjeta.png" alt="">
+                    <img class="specialSize" src="../images/layout/tarjeta.png" alt="">
                 </li>
                 <li>
-                    <img class="specialSize" src="./images/layout/paypal.png" alt="">
+                    <img class="specialSize" src="../images/layout/paypal.png" alt="">
                 </li>
                 <li>
-                    <img class="specialSize" src="./images/layout/visa.png" alt="">
+                    <img class="specialSize" src="../images/layout/visa.png" alt="">
                 </li>
             </ul>
         </div>
@@ -268,9 +280,9 @@
             <p>© 2023 AXPC | All rights reserved.</p>
         </div>
     </footer>
-    <script src="./js/index.js"></script>
-    <script src="./js/pageStyles.js"></script>
-    <script src="./js/store.js"></script>
+    <script src="../js/pageStyles.js"></script>
+    <script src="../js/store.js"></script>
+    <script src="../js/paymentPage.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
